@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Josefin+Sans:wght@500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
+
+html, body 
+{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.smallText, .mediumText
+{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.25;
+}
+.mainHeading
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 2.25rem;
+
+}
+.mediumText
+{
+    font-size: 1.8rem;
+}
+.smallText
+{
+    font-size: 1rem;
+}
+.largeHeading
+{
+    font-family: 'Cinzel', serif;
+}
+
+
+a
+{
+
+    cursor: pointer;
+    padding: .5rem 0rem;
+    color: rgb(53, 53, 53);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-family: poppins;
+    font-weight: 500;
+    position: relative;
+    transition: all .35s ease-in-out;
+}
+a::after
+{
+    content: '';
+    position: absolute;
+    left:30%;
+    bottom: 5px;
+    width: 50%;
+    height: 3px;
+    background-color: rgb(73, 73, 73);
+    transition: all .35s ease-in-out;
+    
+}
+a:hover::after
+{
+    left: 0%;
+    width: 100%;
+    right: 20%;
+}
+
+i 
+{
+    font-size: 1.5rem;
+    padding: .8rem 1.05rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition:all .5s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+i:hover
+{
+    transform: rotate(360deg);
+}
+
+li 
+{
+    list-style: none;
+    margin:0 1.25rem;
+}
+
+
+/* from body  */
+
+body 
+{
+    background-color: #fcf9ee;
+
+    color: rgb(44, 44, 44);
+}
+
+/* header  */
+
+header
+{
+    padding: 1.25rem 2rem;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    box-shadow: 0 5px 1rem rgb(156, 156, 156);
+    background-color: white;
+    z-index: 5;
+}
+.navBar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo .mainHeading
+{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navLink
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* main content */
+
+.heroSection
+{
+    margin-top: 12rem;
+
+}
+.largeHeading
+{
+    padding: 0 4rem;
+    font-size: 10rem;
+    font-weight: bold;
+    text-align: right;
+    position: relative;
+    line-height: 1;
+}
+.largeHeading::after
+{
+    padding: 0 3rem;
+    content: 'cool 2022';
+    font-size: 2rem;
+    position: absolute;
+    top: 55%;
+    right: 0%;
+    font-family: 'Uncial Antiqua', cursive;
+}
+
+.imageContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgBox
+{
+    margin: 2.5rem;
+}
+
+.imgContent 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.explore
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+
+}
+
+.explore a
+{
+    margin-right: 2rem;
+}
+
+
+/******** heroBannerScroller ******/
+
+.heroBannerScroller
+{
+    
+    background-color: #bca408;
+    width: 100vw;
+    margin: 12rem 0;
+    border: 3px solid black;
+}
+.heroBannerScroller  h1 
+{
+    animation: scrollingAni 55s infinite linear;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.heroBannerScroller h1 i
+{
+    border:none ;
+    font-size: 2.5rem;
+}
+
+@keyframes scrollingAni{
+    0%,100%
+    {
+        transform: translateX(0%);
+    }
+    50%
+    {
+        transform: translateX(-100%);
+    }
+}
+
+
+/****** beloBanner Content ************/
+.belowBannerContent
+{
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    padding:2rem 3rem;
+}
+
+.belowBannerContent h1 
+{
+    max-width: 80%;
+    text-align: right;
+    font-size: 2.8rem;
+    line-height: 1.25;
+    font-weight: bold;
+
+}
+
+/* no items */
+
+.cardsContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardsCollection
+{
+    display: grid;   
+    grid-template-columns: repeat(3,1fr);
+    margin: 3rem;
+}
+.card 
+{
+    padding:.5rem 3.5rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .8rem;
+    background-color: #e7d6c4;
+    transition: transform .5s ease;
+}
+.card:hover
+{
+    transform: scale(1.015);
+    box-shadow: 0px 0px 1rem grey;
+}
+.cardContent p:nth-child(2)
+{
+   text-decoration: line-through;
+}
+.cardContent p:nth-child(3)
+{
+   color: rgb(78, 78, 78);
+   font-weight: bold;
+}
+.card img 
+{
+    width: 250px;
+}
+.cardContent
+{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardHeading
+{
+    font-size: 2.8rem;
+    margin: .58rem 0;
+    font-family: poppins;
+}
+.cardContent p 
+{
+    margin: .5rem 0;
+}
+
+.ShopLink a
+{   
+    margin-right: 2rem;
+}
+
+
+/* reviews */
+
+.reviewSection
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    margin: 40vh auto;
+}
+.reviewSection .mainHeading
+{
+    margin: 2.25rem;
+}
+
+/* footer */
+footer
+{
+    padding: 4rem 3rem 2rem;
+    box-shadow: 0 2px 2rem rgb(219, 219, 219);
+}
+.footerUpper,.footerBottom
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 0;
+}
+.footerUpper div 
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.45;
+}
+
+.footerBottom
+{
+    margin-top: 4.5rem;
+}
+
+form 
+{
+    border-bottom: 1px solid yellowgreen;
+}
+.email
+{
+    min-width: 400px;
+    
+}
+
+.button,.email
+{
+    padding: .5rem 1rem;
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-family: poppins;
+    padding: .5rem 1rem;
+    outline: none;
+    border: none;
+    margin-top: .5rem;
+}
+.button
+{
+    background: none;
+    cursor: pointer;
+}
+
+.socialLinks i
+{
+    margin:0 1.75rem ;
+}
+.socilaLinks a:hover::after 
+{
+    width: 0;
+    left: 50%;
+}
+
