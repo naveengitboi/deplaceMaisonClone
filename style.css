@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Josefin+Sans:wght@500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 
@@ -32,7 +33,7 @@ html, body
 }
 .mediumText
 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 .smallText
 {
@@ -41,6 +42,7 @@ html, body
 .largeHeading
 {
     font-family: 'Cinzel', serif;
+    font-size: 10rem;
 }
 
 
@@ -102,8 +104,7 @@ li
 
 body 
 {
-    background-color: #fcf9ee;
-
+    background-color: #fffbea;
     color: rgb(44, 44, 44);
 }
 
@@ -111,12 +112,12 @@ body
 
 header
 {
-    padding: 1.25rem 2rem;
+    padding: .25rem 2rem;
     position: fixed;
     width: 100vw;
     left: 0;
-    box-shadow: 0 5px 1rem rgb(156, 156, 156);
-    background-color: white;
+    box-shadow: 0 2px .5rem rgb(182, 182, 182);
+    background-color: rgb(253, 247, 230);
     z-index: 5;
 }
 .navBar
@@ -127,8 +128,7 @@ header
 }
 .logo .mainHeading
 {
-    font-weight: bold;
-    text-transform: uppercase;
+    font-family: 'Pacifico', cursive;
 }
 .navLink
 {
@@ -137,18 +137,21 @@ header
     align-items: center;
 }
 
+.hamBurger
+{
+    display: none;
+}
+
 
 /* main content */
 
 .heroSection
 {
     margin-top: 12rem;
-
 }
 .largeHeading
 {
     padding: 0 4rem;
-    font-size: 10rem;
     font-weight: bold;
     text-align: right;
     position: relative;
@@ -189,8 +192,6 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 3rem;
-
 }
 
 .explore a
@@ -287,12 +288,13 @@ header
 }
 .card:hover
 {
-    transform: scale(1.015);
-    box-shadow: 0px 0px 1rem grey;
+    transform: scale(1.005);
+    box-shadow: 0px 10px .5rem rgb(12, 12, 12);
 }
 .cardContent p:nth-child(2)
 {
    text-decoration: line-through;
+   color: rgb(255, 101, 101);
 }
 .cardContent p:nth-child(3)
 {
@@ -302,6 +304,11 @@ header
 .card img 
 {
     width: 250px;
+    transition: all 1s ease;
+}
+.card:hover img 
+{
+    transform: scale(1.085);
 }
 .cardContent
 {
@@ -341,7 +348,11 @@ header
 {
     margin: 2.25rem;
 }
-
+.reviewSection p 
+{
+    color: rgb(73, 73, 73);
+    letter-spacing: 1.25;
+}
 /* footer */
 footer
 {
@@ -407,3 +418,392 @@ form
     left: 50%;
 }
 
+/* ***********media Queries********* */
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .mainHeading
+    {
+        font-size: 2rem;
+    }
+    .mediumText
+    {
+        font-size: 1.3rem;
+    }
+    .smallText
+    {
+        font-size: .95rem;
+    }
+    a,i
+    {
+        font-size: 1.15rem;
+    }
+    li 
+    {
+        margin: 1rem;
+    }
+    .largeHeading
+    {
+        font-size: 7rem;
+    }
+
+    /* hero sction */
+    
+    .heroSection
+    {
+        margin-top: 8rem;
+    }
+
+    .largeHeading::after
+    {
+        font-size: 1.5rem;
+    }
+    #imgBox
+    {
+        margin: 2rem 1rem;
+    }
+    #imgBox img 
+    {
+        width: 95%;
+    }
+    .imgContent
+    {
+        justify-content: space-around;
+    }
+    /* heroBannerScroller */
+    .heroBannerScroller
+    {
+        margin: 8rem 0;
+    }
+    .heroBannerScroller h1 i
+    {
+        font-size: 1.5rem;
+    }
+
+    /****** beloBanner Content ************/
+    .belowBannerContent h1 
+    {
+        font-size: 2.2rem;
+    }
+
+    /* noItems */
+
+    .cardsCollection
+    {
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+
+    /* footer */
+
+    footer
+    {
+        padding: 2rem;
+    }
+    .footerBottom
+    {
+        flex-direction: column;
+    }
+    form 
+    {
+        margin: 1rem 0;
+    }
+    .socilaLinks
+    {
+        margin: 2rem;
+    }
+}
+
+@media screen and (min-width:426px) and (max-width:768px) {
+    .mainHeading
+    {
+        font-size: 1.7rem;
+    }
+    .mediumText
+    {
+        font-size: 1.1rem;
+    }
+    .smallText
+    {
+        font-size: .9rem;
+    }
+    a,i
+    {
+        font-size: 1.15rem;
+    }
+    li 
+    {
+        margin: 1rem;
+    }
+    .largeHeading
+    {
+        font-size: 6.15rem;
+    }
+    header
+    {
+        position: relative;
+    }
+    .navLink
+    {
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        background-color: rgb(255, 242, 200);
+        width: 50vh;
+        right: 0%;
+        top:100%;
+        height: calc(100% + 70vh);
+        transform: translateX(100%);
+        transition: .5s ease;
+    }
+    .activeLinks
+    {
+        transform: translateX(0);
+    }
+    .hamBurger
+    {
+        display: block;
+        z-index: 5;
+    }
+    .hamBurger i
+    {
+        border: none;
+        transform: none;
+        color: rgb(77, 77, 77);
+    }
+    #closeBtn 
+    {
+        display: none;
+    }
+
+    /* hero sction */
+    
+    .heroSection
+    {
+        margin-top: 7rem;
+    }
+
+    .largeHeading::after
+    {
+        font-size: 1.2rem;
+    }
+    #imgBox
+    {
+        margin: 2rem 1rem;
+    }
+    #imgBox img 
+    {
+        width: 95%;
+    }
+    .imgContent
+    {
+        justify-content: space-around;
+    }
+    /* heroBannerScroller */
+    .heroBannerScroller
+    {
+        margin: 8rem 0;
+    }
+    .heroBannerScroller h1 i
+    {
+        font-size: 1.5rem;
+    }
+
+    /****** beloBanner Content ************/
+    .belowBannerContent h1 
+    {
+        font-size: 2rem;
+    }
+
+    /* noItems */
+
+    .cardsCollection
+    {
+        grid-template-columns: repeat(2,1fr);
+        gap: .5rem;
+    }
+    .card 
+    {
+        padding: .7rem 2.15rem;
+    }
+
+    /* review */
+
+    /* footer */
+    .reviewSection
+    {
+        margin: 20vh auto;
+        max-width: 80%;
+    }
+    footer
+    {
+        padding: 2rem;
+    }
+    .footerBottom
+    {
+        flex-direction: column;
+    }
+    form 
+    {
+        margin: 1rem 0;
+    }
+    .socilaLinks
+    {
+        margin: 2rem;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .mainHeading
+    {
+        font-size: 1.4rem;
+    }
+    .mediumText
+    {
+        font-size: 1.1rem;
+    }
+    .smallText
+    {
+        font-size: .9rem;
+    }
+    a,i
+    {
+        font-size: 1rem;
+    }
+    li 
+    {
+        margin: 1rem;
+    }
+    .largeHeading
+    {
+        font-size: 4rem;
+    }
+    .InkMode,.cart
+    {
+        display: none;
+    }
+    header
+    {
+        position: relative;
+    }
+    .navLink
+    {
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        background-color: rgb(255, 242, 200);
+        width: 50vh;
+        right: 0%;
+        top:100%;
+        height: calc(100% + 70vh);
+        transform: translateX(100%);
+        transition: .5s ease;
+    }
+    .activeLinks
+    {
+        transform: translateX(0);
+    }
+    .hamBurger
+    {
+        display: block;
+    }
+    .hamBurger i
+    {
+        border: none;
+        transform: none;
+        color: rgb(77, 77, 77);
+    }
+
+    /* hero sction */
+    
+    .heroSection
+    {
+        margin-top: 8rem;
+    }
+    .heroSection .largeHeading
+    {
+        text-align: left;
+        padding: 0 2rem;
+    }
+
+    .largeHeading::after
+    {
+        font-size: 1rem;
+        right: -10%;
+        top: 5%;
+    }
+    .imageContainer
+    {
+        flex-direction: column;
+    }
+    #imgBox
+    {
+        margin: 2rem 1rem;
+    }
+    .imgContent
+    {
+        justify-content: space-between;
+    }
+    /* heroBannerScroller */
+    .heroBannerScroller
+    {
+        margin: 5rem 0;
+    }
+    .heroBannerScroller h1 i
+    {
+        font-size: 1.5rem;
+    }
+
+    /****** beloBanner Content ************/
+    .belowBannerContent
+    {
+        align-items: center;
+        justify-content: center;
+        padding:2rem;
+    }
+    .belowBannerContent h1 
+    {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    /* noItems */
+
+    .cardsCollection
+    {
+        grid-template-columns: repeat(1,1fr);
+        gap: .5rem;
+    }
+    .card 
+    {
+        padding: .7rem 2.15rem;
+    }
+
+    /* review */
+
+    /* footer */
+    .reviewSection
+    {
+        margin: 20vh auto;
+        max-width: 98%;
+    }
+    footer
+    {
+        padding: 2rem;
+    }
+    .footerBottom,.footerUpper
+    {
+        flex-direction: column;
+    }
+    .footerUpper div 
+    {
+        margin: 1rem 0;
+    }
+    form 
+    {
+        margin: 1rem 0;
+    }
+    .socilaLinks
+    {
+        margin: 2rem;
+    }
+}
